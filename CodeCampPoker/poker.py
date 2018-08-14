@@ -17,7 +17,7 @@ def is_straight(hand):
     new_hand=[]
     for i in hand:
     	if(i[0].isDigit()):
-    		new_hand.append(int(i[0])
+    		new_hand.append(int(i[0]))
     	else:
     		new_hand.append(i[0])
 
