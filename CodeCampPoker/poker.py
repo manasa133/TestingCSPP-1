@@ -25,16 +25,16 @@ def is_straight(hand):
     new_hand_digit.sort()
 
 
-    print(new_hand_digit)
+    # print(new_hand_digit)
     isDigit = True
     for i in range(len(new_hand_digit)-1):
     	if(new_hand_digit[i+1] != new_hand_digit[i]+1):
     		isDigit = False
     		break
-    print(isDigit)
+    # print(isDigit)
 
 
-    print(new_hand_char)
+    # print(new_hand_char)
     isChar = True
     for i in range(len(new_hand_char)-1):
     	if(new_hand_char[i]>new_hand_char[i+1]):
@@ -42,8 +42,10 @@ def is_straight(hand):
     		break
 
     if isDigit and isChar:
+    	print("true")
     	return True
     else:
+    	print("False")
     	return False
 
 def is_flush(hand):
