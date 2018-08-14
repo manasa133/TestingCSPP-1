@@ -62,9 +62,9 @@ def is_flush(hand):
     new_hand = []
     for i in hand:
     	new_hand.append(i[1])
-    print("newHAnd",new_hand)
+    # print("newHAnd",new_hand)
     if all_same(new_hand):
-    	print("True")
+    	# print("True")
     	return True
     return False
 
