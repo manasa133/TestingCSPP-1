@@ -34,11 +34,17 @@ def is_straight(hand):
     print(isDigit)
 
 
+    print(new_hand_char)
+    isChar = True
+    for i in range(len(new_hand_char)-1):
+    	if(new_hand_char[i]>new_hand_char[i+1]):
+    		isChar = False
+    		break
 
-    
-
-
-    pass
+    if isDigit and isChar:
+    	return True
+    else:
+    	return False
 
 def is_flush(hand):
     '''
