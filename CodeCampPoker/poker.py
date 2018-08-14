@@ -57,6 +57,10 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    new_hand = []
+    for i in hand:
+    	new_hand.append(i[1])
+    print("newHAnd",new_hand)
     pass
 
 def hand_rank(hand):
