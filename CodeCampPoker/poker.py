@@ -20,6 +20,8 @@ def is_straight(hand):
 
     print(new_hand)
     print(new_hand.sort())
+    print(new_hand)
+
 
     pass
 
