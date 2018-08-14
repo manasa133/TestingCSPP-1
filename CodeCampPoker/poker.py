@@ -21,9 +21,9 @@ def is_straight(hand):
     	else:
     		new_hand.append(i[0])
 
-    print(new_hand)
+    print("old",new_hand)
     print(new_hand.sort())
-    print(new_hand)
+    print("sorted",new_hand)
 
 
     pass
