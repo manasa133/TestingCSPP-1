@@ -14,6 +14,12 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    new_hand=[]
+    for i in hand:
+    	print(i[0])
+    	new_hand.append(i[0])
+    print(new_hand)
+
     pass
 
 def is_flush(hand):
@@ -59,7 +65,7 @@ def hand_rank(hand):
     elif(is_straight(hand)):
     	return 1
     else:
-    	return 1
+    	return 0
 
 def poker(hands):
     '''
