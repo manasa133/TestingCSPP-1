@@ -14,16 +14,28 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    new_hand=[]
+    new_hand_digit=[]
+    new_hand_char=[]
     for i in hand:
     	if(i[0].isdigit()):
-    		new_hand.append(int(i[0]))
+    		new_hand_digit.append(int(i[0]))
     	else:
-    		new_hand.append(i[0])
+    		new_hand_char.append(i[0])
+    new_hand_char.sort()
+    new_hand_digit.sort()
 
-    print("old",new_hand)
-    print(new_hand.sort())
-    print("sorted",new_hand)
+
+    print(new_hand_digit)
+    isDigit = True
+    for i in range(len(new_hand_digit)-1):
+    	if(new_hand_digit[i+1] != new_hand_digit[i]+1):
+    		isDigit = False
+    		break
+    print(isDigit)
+
+
+
+    
 
 
     pass
