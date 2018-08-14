@@ -14,16 +14,24 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    dictionary1 = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
-    temp_lst =[]
-    for card in hand:
-        temp_lst.append(dictionary1[card[0]])
+    # dictionary1 = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
+    if all(True if i in "A2345" else False for i,v in hand ):
+        return True
+   
+    cards_list = set(["--23456789TJQKA".index(i) for i,v in hand])
+    return len(cards_list)==5 and max(cards_list)-min(cards_list)==4
 
-    temp_lst.sort()
-    for each in range(len(temp_lst)-1):
-        if(temp_lst[each] - temp_lst[each+1]!= -1):
-            return False
-    return True
+
+
+    # temp_lst =[]
+    # for card in hand:
+    #     temp_lst.append(dictionary1[card[0]])
+
+    # temp_lst.sort()
+    # for each in range(len(temp_lst)-1):
+    #     if(temp_lst[each] - temp_lst[each+1]!= -1):
+    #         return False
+    # return True
 
 
 
