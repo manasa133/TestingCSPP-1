@@ -42,10 +42,10 @@ def is_straight(hand):
     		break
 
     if isDigit and isChar:
-    	print("true")
+    	# print("true")
     	return True
     else:
-    	print("False")
+    	# print("False")
     	return False
 def  all_same(items):
 	 return len( set( items ) ) == 1 
