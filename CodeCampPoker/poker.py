@@ -47,6 +47,8 @@ def is_straight(hand):
     else:
     	print("False")
     	return False
+def  all_same(items):
+	 return len( set( items ) ) == 1 
 
 def is_flush(hand):
     '''
