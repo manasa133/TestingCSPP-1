@@ -61,7 +61,10 @@ def is_flush(hand):
     for i in hand:
     	new_hand.append(i[1])
     print("newHAnd",new_hand)
-    pass
+    if all_same(new_hand):
+    	print("True")
+    	return True
+    return False
 
 def hand_rank(hand):
     '''
