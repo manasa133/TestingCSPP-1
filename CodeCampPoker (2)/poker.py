@@ -21,7 +21,10 @@ def full_house(hand):
     pass
 
 def one_pair(hand):
-    pass
+    hand_temp =set()
+    for i,v in hand:
+        hand_temp.add(v)
+    return len(hand_temp)==2
 
 def two_pair():
     pass
@@ -131,8 +134,8 @@ def hand_rank(hand):
     	return 8
     elif(four_of_a_kind(hand)):
         return 7
-    # elif(full_house(hand)):
-    #     return 6
+    elif(three_of_a_kind(hand) and one_pair(hand)):
+         return 6
     elif(is_flush(hand)):
     	return 5
     elif(is_straight(hand)):
