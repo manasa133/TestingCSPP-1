@@ -21,8 +21,8 @@ def three_of_a_kind(hand):
 def one_pair(hand):
     hand_temp =set()
     for i,v in hand:
-        hand_temp.add(v)
-    return len(hand_temp)==2
+        hand_temp.add(i)
+    return len(hand_temp)==4
 
 def two_pair():
     return len(set(i[0] for i in hand)) == 3
@@ -140,15 +140,15 @@ def hand_rank(hand):
     	return 4
     elif(three_of_a_kind(hand)):
         return 3
-    # elif(two_pair(hand)):
-    #     return 2
-    # elif(one_pair(hand)):
-    #     return 1
+    elif(two_pair(hand)):
+        return 2
+    elif(one_pair(hand)):
+        return 1
     else:
     	return 0
 
 def poker(hands):
-    
+
     '''
         This function is completed for you. Read it to learn the code.
 
