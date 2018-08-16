@@ -148,6 +148,7 @@ def hand_rank(hand):
     	return 0
 
 def poker(hands):
+    
     '''
         This function is completed for you. Read it to learn the code.
 
@@ -176,6 +177,6 @@ if __name__ == "__main__":
         line = raw_input()
         ha = line.split(" ")
         HANDS.append(ha)
-    print("HANDS" ,HANDS)
+    # print("HANDS" ,HANDS)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
