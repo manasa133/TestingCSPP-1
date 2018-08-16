@@ -3,6 +3,11 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def four_of_a_kind(hand):
+    hand_temp =[]
+    for i,v in hand:
+        hand_temp.append[i]
+    print("******", hand_temp)
 
 def is_straight(hand):
     '''
@@ -102,7 +107,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-
+    four_of_a_kind(hand)
     if(is_straight(hand) and is_flush(hand)):
     	return 3
     elif(is_flush(hand)):
