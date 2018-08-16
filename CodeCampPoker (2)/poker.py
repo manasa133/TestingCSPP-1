@@ -156,7 +156,8 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    temp=max(hands, key=hand_rank)
+
+    temp=map(hands,hand_rank)
     print(temp)
 
 if __name__ == "__main__":
