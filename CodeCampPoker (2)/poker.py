@@ -4,12 +4,11 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def four_of_a_kind(hand):
-    hand_temp =[]
+    hand_temp =set()
     for i,v in hand:
-        hand_temp.append(i)
+        hand_temp.add(i)
     print("******", hand_temp)
-    hand_temp.sort()
-    print(hand_temp)
+
 
 def is_straight(hand):
     '''
