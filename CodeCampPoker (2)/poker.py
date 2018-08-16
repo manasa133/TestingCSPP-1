@@ -11,6 +11,13 @@ def four_of_a_kind(hand):
 
     return len(hand_temp)==2
 
+def three_of_a_kind(hand):
+    hand_temp =set()
+    for i,v in hand:
+        hand_temp.add(i)
+    return len(hand_temp)==3
+
+
 
 def is_straight(hand):
     '''
@@ -112,13 +119,21 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # print(four_of_a_kind(hand))
     if(is_straight(hand) and is_flush(hand)):
-    	return 4
+    	return 8
     elif(four_of_a_kind(hand)):
-        return 3
+        return 7
+    elif(full_house(hand)):
+        return 6
     elif(is_flush(hand)):
-    	return 2
+    	return 5
     elif(is_straight(hand)):
-    	return 1
+    	return 4
+    elif(three_of_a_kind(hand)):
+        return 3
+    elif(two_pair(hand)):
+        return 2
+    elif(one_pair(hand)):
+        return 1
     else:
     	return 0
 
