@@ -17,6 +17,15 @@ def three_of_a_kind(hand):
         hand_temp.add(i)
     return len(hand_temp)==3
 
+def full_house(hand):
+    pass
+
+def one_pair(hand):
+    pass
+
+def two_pair():
+    pass
+
 
 
 def is_straight(hand):
