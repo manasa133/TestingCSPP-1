@@ -100,14 +100,14 @@ def is_flush(hand):
 
 def pair_two(ranks):
     high_pair= None
-    print("rank",ranks)
+    # print("rank",ranks)
     for i in ranks:
         if (ranks.count(i)==2):
             high_pair = i
             break
     low_pair = None
     temp = sorted(ranks)
-    print("rank1",temp)
+    # print("rank1",temp)
     for i in temp:
         if (temp.count(i)==2):
             low_pair = i
