@@ -10,10 +10,17 @@ def card_values(hand):
 
 
 def four_of_a_kind(hand):
-     return len(set(i for i,v in hand)) == 2
+    for i,v in hand:
+        if hand.count(i)==2:
+            return True
+    return False
+     # return len(set(i for i,v in hand)) == 2
 
 def three_of_a_kind(hand):
-  return len(set(i for i,v in hand)) == 3
+    for i,v in hand:
+        if hand.count(i)==3:
+            return True
+    return False
 
 def two_pair(hand):
     return len(set(i for i,v in hand)) == 3
@@ -90,9 +97,7 @@ def is_flush(hand):
     new_hand = []
     for i in hand:
     	new_hand.append(i[1])
-    # print("newHAnd",new_hand)
     if all_same(new_hand):
-    	# print("True")
     	return True
     return False
 
