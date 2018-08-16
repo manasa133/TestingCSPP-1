@@ -8,7 +8,7 @@ def card_values(hand):
 
 
 def four_of_a_kind(hand):
-    for i,v in hand:
+    for i in hand:
         if hand.count(i)==4:
             return True
     return False
