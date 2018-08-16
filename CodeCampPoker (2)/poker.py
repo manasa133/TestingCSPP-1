@@ -135,6 +135,7 @@ def hand_rank(hand):
     elif(one_pair(hand)):
         return 1
     else:
+        print("0000000000")
     	return 0
 
 def poker(hands):
