@@ -22,6 +22,7 @@ def one_pair(hand):
     hand_temp =set()
     for i,v in hand:
         hand_temp.add(i)
+    print("one pair", hand_temp)
     return len(hand_temp)==4
 
 def two_pair(hand):
