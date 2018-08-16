@@ -135,7 +135,6 @@ def hand_rank(hand):
     elif(one_pair(hand)):
         return 1
     else:
-        print("0000000000")
     	return 0
 
 def poker(hands):
@@ -157,7 +156,8 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    temp=max(hands, key=hand_rank)
+    print(temp)
 
 if __name__ == "__main__":
     # read the number of test cases
