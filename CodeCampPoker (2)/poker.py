@@ -9,6 +9,8 @@ def four_of_a_kind(hand):
         hand_temp.add(i)
     print("******", hand_temp)
 
+    return len(hand_temp)==2
+
 
 def is_straight(hand):
     '''
