@@ -4,28 +4,18 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def four_of_a_kind(hand):
-    hand_temp =set()
-    for i,v in hand:
-        hand_temp.add(i)
-    #print("******", hand_temp)
-    return len(hand_temp)==2
+     return len(set(i for i.v in hand)) == 2
 
 def three_of_a_kind(hand):
-    hand_temp =set()
-    for i,v in hand:
-        hand_temp.add(i)
-    return len(hand_temp)==3
-
-
-def one_pair(hand):
-    hand_temp =set()
-    for i,v in hand:
-        hand_temp.add(i)
-    # print("one pair", hand_temp)
-    return len(hand_temp)==4
+  return len(set(i for i,v in hand)) == 3
 
 def two_pair(hand):
-    return len(set(i[0] for i in hand)) == 3
+    return len(set(i for i.v in hand)) == 3
+
+def one_pair(hand):
+     return len(set(i for i.v in hand)) == 4
+
+
 
 
 
