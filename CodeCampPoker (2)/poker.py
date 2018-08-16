@@ -3,6 +3,17 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def card_rank(hand):
+    return sorted(['--23456789TJQKA'.index(c) for c,s in hand],reverse=True)
+
+def kind(ranks,n):
+    for each in ranks:
+        if ranks.count(each)==n:
+            return each
+    return None
+
+
+
 def four_of_a_kind(hand):
      return len(set(i for i,v in hand)) == 2
 
@@ -14,9 +25,6 @@ def two_pair(hand):
 
 def one_pair(hand):
      return len(set(i for i,v in hand)) == 4
-
-
-
 
 
 def is_straight(hand):
@@ -118,24 +126,36 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     # print(four_of_a_kind(hand))
+    ranks = card_values(hand)
     if(is_straight(hand) and is_flush(hand)):
-    	return 8
+    	return (8,ranks)
     elif(four_of_a_kind(hand)):
-        return 7
-    elif(three_of_a_kind(hand) and one_pair(hand)):
-         return 6
+        return (7,ranks)
+    elif(three_of_a_kind(hand) and two_pair(hand)):
+         return (6,ranks)
     elif(is_flush(hand)):
-    	return 5
+    	return (5,ranks)
     elif(is_straight(hand)):
-    	return 4
+    	return (4,ranks)
     elif(three_of_a_kind(hand)):
-        return 3
+        return (3,ranks)
     elif(two_pair(hand)):
-        return 2
+        return (2,ranks)
     elif(one_pair(hand)):
-        return 1
+        return (1,ranks)
     else:
-    	return 0
+    	return (0,ranks)
+
+    
+    # if(is_straight(ranks) and is_flush(hand)):
+    #   return (8,rank)
+    # if kind(ranks,4):
+    #     return (7,rank)
+    # if kind(ranks,3) and :
+    #     return()
+    # if  
+
+
 
 def poker(hands):
 
@@ -157,8 +177,8 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
 
-    temp=map(hand_rank,hands)
-    print(temp)
+    return max(hands, key=hand_rank)
+    
 
 if __name__ == "__main__":
     # read the number of test cases
@@ -171,5 +191,4 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # print("HANDS" ,HANDS)
     # test the poker function to see how it works
-    poker(HANDS)
-    # print(' '.join(poker(HANDS)))
+    print(' '.join(poker(HANDS)))
