@@ -7,14 +7,11 @@ def card_values(hand):
     return sorted(['--23456789TJQKA'.index(c) for c,s in hand],reverse=True)
 
 
-
-
 def four_of_a_kind(hand):
     for i,v in hand:
         if hand.count(i)==4:
             return True
     return False
-     # return len(set(i for i,v in hand)) == 2
 
 def three_of_a_kind(hand):
     for i,v in hand:
@@ -157,7 +154,7 @@ def hand_rank(hand):
     	return (4,ranks)
     elif(three_of_a_kind(hand)):
         return (3,ranks)
-    elif(pair_two(hand)):
+    elif(two_pair(hand)):
         return (2,pair_two(ranks),ranks)
     elif(one_pair(hand)):
         return (1,ranks)
