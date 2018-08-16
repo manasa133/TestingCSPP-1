@@ -24,7 +24,7 @@ def one_pair(hand):
         hand_temp.add(i)
     return len(hand_temp)==4
 
-def two_pair():
+def two_pair(hand):
     return len(set(i[0] for i in hand)) == 3
 
 
