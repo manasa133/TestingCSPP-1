@@ -126,7 +126,7 @@ def hand_rank(hand):
     	return (8,ranks)
     elif(four_of_a_kind(hand)):
         return (7,ranks)
-    elif(three_of_a_kind(hand) and two_pair(hand)):
+    elif(three_of_a_kind(hand) and one_pair(hand)):
          return (6,ranks)
     elif(is_flush(hand)):
     	return (5,ranks)
