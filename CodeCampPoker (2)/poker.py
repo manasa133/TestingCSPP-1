@@ -4,7 +4,7 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def four_of_a_kind(hand):
-     return len(set(i for i.v in hand)) == 2
+     return len(set(i for i,v in hand)) == 2
 
 def three_of_a_kind(hand):
   return len(set(i for i,v in hand)) == 3
