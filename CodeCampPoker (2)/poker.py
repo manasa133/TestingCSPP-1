@@ -144,19 +144,19 @@ def hand_rank(hand):
     ranks = card_values(hand)
     if(is_straight(hand) and is_flush(hand)):
     	return (8,ranks)
-    elif(four_of_a_kind(hand)):
+    elif(four_of_a_kind(ranks)):
         return (7,ranks)
-    elif(three_of_a_kind(hand) and one_pair(hand)):
+    elif(three_of_a_kind(ranks) and one_pair(ranks)):
          return (6,ranks)
     elif(is_flush(hand)):
     	return (5,ranks)
     elif(is_straight(hand)):
     	return (4,ranks)
-    elif(three_of_a_kind(hand)):
+    elif(three_of_a_kind(ranks)):
         return (3,ranks)
-    elif(two_pair(hand)):
+    elif(two_pair(ranks)):
         return (2,ranks,pair_two(ranks))
-    elif(one_pair(hand)):
+    elif(one_pair(ranks)):
         return (1,ranks)
     else:
     	return (0,ranks)
