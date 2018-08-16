@@ -20,10 +20,10 @@ def three_of_a_kind(hand):
     return False
 
 def two_pair(hand):
-    return len(set(i for i,v in hand)) == 3
+    return len(set(i for i in hand)) == 3
 
 def one_pair(hand):
-     return len(set(i for i,v in hand)) == 4
+     return len(set(i for i in hand)) == 4
 
 
 def is_straight(hand):
