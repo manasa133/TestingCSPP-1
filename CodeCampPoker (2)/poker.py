@@ -107,7 +107,7 @@ def pair_two(ranks):
             break
     low_pair = None
     temp = sorted(ranks)[::-1]
-    print("rank",temp)
+    print("rank1",temp)
     for i in temp:
         if (temp.count(i)==2):
             low_pair = i
