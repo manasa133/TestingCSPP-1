@@ -10,10 +10,10 @@ def three_of_a_kind(hand):
   return len(set(i for i,v in hand)) == 3
 
 def two_pair(hand):
-    return len(set(i for i.v in hand)) == 3
+    return len(set(i for i,v in hand)) == 3
 
 def one_pair(hand):
-     return len(set(i for i.v in hand)) == 4
+     return len(set(i for i,v in hand)) == 4
 
 
 
