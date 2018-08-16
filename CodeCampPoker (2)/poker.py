@@ -158,23 +158,13 @@ def hand_rank(hand):
     elif(three_of_a_kind(hand)):
         return (3,ranks)
     elif(pair_two(hand)):
-        return (2,pair_two(ranks))
+        return (2,pair_two(ranks),ranks)
     elif(one_pair(hand)):
         return (1,ranks)
     else:
     	return (0,ranks)
 
     
-    # if(is_straight(ranks) and is_flush(hand)):
-    #   return (8,rank)
-    # if kind(ranks,4):
-    #     return (7,rank)
-    # if kind(ranks,3) and :
-    #     return()
-    # if  
-
-
-
 def poker(hands):
 
     '''
