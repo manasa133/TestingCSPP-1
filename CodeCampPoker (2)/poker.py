@@ -6,7 +6,7 @@
 def four_of_a_kind(hand):
     hand_temp =[]
     for i,v in hand:
-        hand_temp.append[i]
+        hand_temp.append(i)
     print("******", hand_temp)
 
 def is_straight(hand):
