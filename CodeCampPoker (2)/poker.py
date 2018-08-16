@@ -155,7 +155,7 @@ def hand_rank(hand):
     elif(three_of_a_kind(hand)):
         return (3,ranks)
     elif(two_pair(hand)):
-        return (2,pair_two(ranks),ranks)
+        return (2,ranks,pair_two(ranks))
     elif(one_pair(hand)):
         return (1,ranks)
     else:
