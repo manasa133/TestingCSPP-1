@@ -3,14 +3,9 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-def card_rank(hand):
+def card_values(hand):
     return sorted(['--23456789TJQKA'.index(c) for c,s in hand],reverse=True)
 
-def kind(ranks,n):
-    for each in ranks:
-        if ranks.count(each)==n:
-            return each
-    return None
 
 
 
