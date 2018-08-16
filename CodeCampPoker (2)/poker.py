@@ -96,6 +96,24 @@ def is_flush(hand):
     	return True
     return False
 
+def pair_two(ranks):
+    high_pair= None
+    for i in ranks:
+        if (ranks.count(i)==2):
+            high_pair = i
+            break
+    low_pair = None
+    temp = sorted(ranks)[::-1]
+    for i in temp:
+        if (ranks.count(i)==2):
+            high_pair = i
+            break
+    if high_pair and low_pair:
+        return high_pair,low_pair
+    return None
+
+
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -134,8 +152,8 @@ def hand_rank(hand):
     	return (4,ranks)
     elif(three_of_a_kind(hand)):
         return (3,ranks)
-    elif(two_pair(hand)):
-        return (2,ranks)
+    elif(pair_two(hand)):
+        return (2,pair_two(ranks))
     elif(one_pair(hand)):
         return (1,ranks)
     else:
