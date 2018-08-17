@@ -51,7 +51,9 @@ def similarity(dict1, dict2):
         numerator+= (v[0]*v[1])
 
     den1 = math.sqrt(sum([v[0]**2 for k,v in freqDictionary.iteritems()]))
+    den2 = math.sqrt(sum([v[1]**2 for k,v in freqDictionary.iteritems()]))
     print(den1)
+    print(den2)
 
 
 def load_stopwords(filename):
