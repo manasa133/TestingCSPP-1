@@ -13,7 +13,7 @@ def tokenize(s):
 def vectorize(dictionry,words,index):
     stopwords = load_stopwords("stopwords.txt")
     for w in words:
-        if w not in stopwords:
+        if w not in stopwords and len(w) > 0 :
             if w not in dictionry:
                 dictionry[w]=[0,0]
             dictionry[w][index]+=1
