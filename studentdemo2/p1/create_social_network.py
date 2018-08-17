@@ -5,14 +5,12 @@
 def create_social_network(data):
     network={}
     lst1 = data.splitlines()
+
     for line in lst1:
-        words = line.split(" follows ")
-        if(len(words)==1):
-            continue
-        elif words[0] not in network:
-            network[words[0]] = words[1].split(",")
-        else:
-            network[words[0]].append( words[1].split(","))
+        if (" follows " in line):
+            words = line.split(" follows ")
+            if words[0] not in network:
+                network[words[0]] = words[1].split(",")
     return network
 
 
@@ -55,10 +53,10 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
-    lines = int(raw_input())
+    lines = int(input())
     for i in range(lines):
         i += 1
-        string += raw_input()
+        string += input()
         string += '\n'
 
     print(create_social_network(string))
