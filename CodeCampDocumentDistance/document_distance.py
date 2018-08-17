@@ -32,8 +32,8 @@ def similarity(dict1, dict2):
     dict1.lower()
     dict2.lower()
     # words_1 = dict1.split(" ")
-    words_1 = [x.strip() for x in dict1.split(' ')]
-    words_2 = [x.strip() for x in dict2.split(' ')]
+    words_1 = [x.strip() for x in dict1.lower().split(' ')]
+    words_2 = [x.strip() for x in dict2.lower().split(' ')]
     Common_wrds = commonWords(words_1,words_2)
     RemoveStopWords =  R_stop_words(Common_wrds,load_stopwords("stopwords.txt"))
 
