@@ -5,15 +5,19 @@ import re
 import math
 
 def Words_list(doc):
+
 	word = doc.lower()
 	word = word.split(" ")
 	words =[]
 	for w in word:
 		words.append(w.strip())
-	regex = re.compile("[^a-z]")	
+	print(words)
+	words1 =[]
+	regex = re.compile('[^a-z]')	
 	for w in words:
-		words.append(regex.sub("", w))
-	return words
+		words1.append(regex.sub("", w))
+	
+	return words1
 
 
 def remove_Stop_words(words, stopWords):
@@ -43,16 +47,18 @@ def similarity(dict1, dict2):
     words_1  = Words_list(dict1)
     words_2 = Words_list(dict2)
 
+    print(words_1)
+
     stopWords = load_stopwords("stopwords.txt")
 
     words_1 = remove_Stop_words(words_1,stopWords)
     words_2 = remove_Stop_words (words_2,stopWords)
 
     dictionary = dict()
-    dictionary=createDictionary(dictionary,words_1,0)
+    dictionary =createDictionary(dictionary,words_1,0)
     dictionary = createDictionary(dictionary,words_2,1)
 
-    print(dictionary)
+  
 
     return compute(dictionary)
 
