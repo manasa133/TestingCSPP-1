@@ -33,7 +33,7 @@ def similarity(dict1, dict2):
     words_1 = dict1.split(" ")
     words_2 = dict2.split(" ")
     Common_wrds = commonWords(words_1,words_2)
-    RemoveStopWords =  R_stop_words(Common_wrds,load_stopwords())
+    RemoveStopWords =  R_stop_words(Common_wrds,load_stopwords("stopwords.txt"))
 
     freqDictionary = {}
 
