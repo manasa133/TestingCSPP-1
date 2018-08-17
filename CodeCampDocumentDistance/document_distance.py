@@ -54,6 +54,9 @@ def similarity(dict1, dict2):
     # print(den1)
     # print(den2)
 
+    if(den1 == 0.0 or den2 ==0.0):
+        return 0.0
+
     res = numerator/(den1*den2)
     # print(res)
     return res
