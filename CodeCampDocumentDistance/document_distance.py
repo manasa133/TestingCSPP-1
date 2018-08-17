@@ -1,3 +1,4 @@
+import math
 '''
     Document Distance - A detailed description is given in the PDF
 '''
@@ -49,7 +50,7 @@ def similarity(dict1, dict2):
     for k,v in freqDictionary.iteritems():
         numerator+= (v[0]*v[1])
 
-    den1 = [v[0]**2 for k,v in freqDictionary.iteritems()]
+    den1 = math.sqrt(sum([v[0]**2 for k,v in freqDictionary.iteritems()]))
     print(den1)
 
 
