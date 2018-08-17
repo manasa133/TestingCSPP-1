@@ -7,7 +7,9 @@ def create_social_network(data):
     lst1 = data.splitlines()
     for line in lst1:
         words = line.split(" follows ")
-        if words[0] not in network:
+        if(len(words)==1):
+            continue
+        elif words[0] not in network:
             network[words[0]] = words[1].split(",")
     return network
 
