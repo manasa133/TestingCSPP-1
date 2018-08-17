@@ -21,6 +21,7 @@ def vectorize(dictionry,words,index):
 
 
 def compute_distance(dictionry):
+	print(len(dictionry.keys()))
     n=sum([v[0]*v[1] for v in dictionry.values()])
     d1 = math.sqrt(sum([v[0]**2 for v in dictionry.values()]))
     d2 = math.sqrt(sum([v[1]**2 for v in dictionry.values()]))
@@ -29,7 +30,6 @@ def compute_distance(dictionry):
 def similarity(d1, d2):
     '''
         Compute the document distance as given in the PDF
-
     '''
     dictionry = dict()
     dictionry = vectorize(dictionry, tokenize(d1),0)
@@ -50,8 +50,8 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = raw_input()
-    input2 = raw_input()
+    input1 = input()
+    input2 = input()
 
     print(similarity(input1, input2))
 
