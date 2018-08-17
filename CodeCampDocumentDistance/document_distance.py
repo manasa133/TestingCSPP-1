@@ -44,6 +44,14 @@ def similarity(dict1, dict2):
 
     print(freqDictionary)
 
+    numerator = 0
+
+    for k,v in freqDictionary:
+        numerator+= (v[0]*v[1])
+
+    den1 = [v[0] for k,v in freqDictionary]
+    print(den1)
+
 
 def load_stopwords(filename):
     '''
