@@ -56,6 +56,7 @@ def similarity(dict1, dict2):
     print(den2)
 
     res = numerator/(den1*den2)
+    print(res)
 
 
 def load_stopwords(filename):
