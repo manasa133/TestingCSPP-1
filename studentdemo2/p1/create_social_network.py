@@ -11,6 +11,8 @@ def create_social_network(data):
             continue
         elif words[0] not in network:
             network[words[0]] = words[1].split(",")
+        else:
+            network[words[0]].append( words[1].split(","))
     return network
 
 
