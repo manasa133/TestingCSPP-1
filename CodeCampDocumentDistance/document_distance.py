@@ -21,7 +21,7 @@ def vectorize(dictionry,words,index):
 
 
 def compute_distance(dictionry):
-	print(len(dictionry.keys()))
+    print(len(dictionry.keys()))
     n=sum([v[0]*v[1] for v in dictionry.values()])
     d1 = math.sqrt(sum([v[0]**2 for v in dictionry.values()]))
     d2 = math.sqrt(sum([v[1]**2 for v in dictionry.values()]))
