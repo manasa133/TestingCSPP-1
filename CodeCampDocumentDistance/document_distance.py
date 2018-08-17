@@ -8,7 +8,7 @@ def wordFrequncy():
 def commonWords(word1,word2):
     common=set()
     for each in word1:
-        if in word2:
+        if each in word2:
             common.add(each)
     print("common",common)
     return common
