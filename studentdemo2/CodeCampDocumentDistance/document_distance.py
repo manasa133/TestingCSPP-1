@@ -13,6 +13,7 @@ def Words_list(doc):
 	regex = re.compile("[^a-z]")	
 	for w in words:
 		words.append(regex.sub("", w))
+	return words
 
 
 def remove_Stop_words(words, stopWords):
