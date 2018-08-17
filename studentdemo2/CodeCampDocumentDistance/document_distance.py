@@ -34,8 +34,11 @@ def createDictionary(dictionary,words,index):
 
 def compute(dictionary):
 	numerator = sum([v[0]*v[1] for v in dictionary.values()])
-	denominator1 = math.sqrt(sum([v[0]**2 for v in dictionary.values()]))
-	denominator2 = math.sqrt(sum([v[1]**2 for v in dictionary.values()]))
+	denominator1 = (sum([v[0]**2 for v in dictionary.values()]))**0.5
+	denominator2 = (sum([v[1]**2 for v in dictionary.values()]))**0.5
+
+	print(numerator,(denominator1*denominator2))
+	
 	return numerator/(denominator1*denominator2)
 
 def similarity(dict1, dict2):
@@ -57,6 +60,8 @@ def similarity(dict1, dict2):
     # print(sorted(dictionary.keys()))
 
     return compute(dictionary)
+    # 0.4425012603813615
+
 
 
 def load_stopwords(filename):
@@ -73,8 +78,8 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = raw_input()
-    input2 = raw_input()
+    input1 = input()
+    input2 = input()
 
     print(similarity(input1, input2))
 
