@@ -49,7 +49,7 @@ def similarity(dict1, dict2):
     for k,v in freqDictionary.iteritems():
         numerator+= (v[0]*v[1])
 
-    print("count",count(freqDictionary))
+    print("count",len(freqDictionary))
 
     den1 = math.sqrt(sum([v[0]**2 for k,v in freqDictionary.iteritems()]))
     den2 = math.sqrt(sum([v[1]**2 for k,v in freqDictionary.iteritems()]))
