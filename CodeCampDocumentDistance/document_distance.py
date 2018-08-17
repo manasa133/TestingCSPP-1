@@ -22,12 +22,9 @@ def vectorize(dictionry,words,index):
 
 def compute_distance(dictionry):
     n=sum([v[0]*v[1] for v in dictionry.values()])
-
     d1 = math.sqrt(sum([v[0]**2 for v in dictionry.values()]))
     d2 = math.sqrt(sum([v[1]**2 for v in dictionry.values()]))
     return n/(d1*d2)
-
-
 
 def similarity(d1, d2):
     '''
@@ -38,13 +35,6 @@ def similarity(d1, d2):
     dictionry = vectorize(dictionry, tokenize(d1),0)
     dictionry = vectorize(dictionry, tokenize(d2),1)
     return compute_distance(dictionry)
-
-
-    
-
-
-
-    pass
 
 def load_stopwords(filename):
     '''
