@@ -52,6 +52,8 @@ def similarity(dict1, dict2):
     dictionary=createDictionary(dictionary,words_1,0)
     dictionary = createDictionary(dictionary,words_2,1)
 
+    print(dictionary)
+
     return compute(dictionary)
 
 
