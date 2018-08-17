@@ -11,12 +11,10 @@ def Words_list(doc):
 	words =[]
 	for w in word:
 		words.append(w.strip())
-	print(words)
 	words1 =[]
 	regex = re.compile('[^a-z]')	
 	for w in words:
 		words1.append(regex.sub("", w))
-	
 	return words1
 
 
@@ -46,8 +44,6 @@ def similarity(dict1, dict2):
     '''
     words_1  = Words_list(dict1)
     words_2 = Words_list(dict2)
-
-    print(words_1)
 
     stopWords = load_stopwords("stopwords.txt")
 
