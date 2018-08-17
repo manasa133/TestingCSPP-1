@@ -21,7 +21,7 @@ def Words_list(doc):
 def remove_Stop_words(words, stopWords):
 	words1 = []
 	for w in words:
-		if w not in stopWords:
+		if w not in stopWords and len(w)>0:
 			words1.append(w)
 	return words1
 
