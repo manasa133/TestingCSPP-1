@@ -42,14 +42,14 @@ def similarity(dict1, dict2):
         freqDictionary[i].append(words_1.count(i))
         freqDictionary[i].append(words_2.count(i))
 
-    print(freqDictionary)
+    # print(freqDictionary)
 
     numerator = 0
 
-    for k,v in freqDictionary:
+    for k,v in freqDictionary.iteritems():
         numerator+= (v[0]*v[1])
 
-    den1 = [v[0] for k,v in freqDictionary]
+    den1 = [v[0] for k,v in freqDictionary.iteritems()]
     print(den1)
 
 
