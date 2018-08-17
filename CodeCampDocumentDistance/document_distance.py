@@ -10,8 +10,16 @@ def commonWords(word1,word2):
     for each in word1:
         if each in word2:
             common.add(each)
-    print("common",common)
+    # print("common",common)
     return common
+
+def R_stop_words(commonwrds,stopwrds):
+    newSet = commonwrds.copy()
+    for i in stopwrds:
+        if i in newSet:
+            newSet.remove(i)
+    return newSet
+
 
 
 def similarity(dict1, dict2):
@@ -25,6 +33,17 @@ def similarity(dict1, dict2):
     words_1 = dict1.split(" ")
     words_2 = dict2.split(" ")
     Common_wrds = commonWords(words_1,words_2)
+    RemoveStopWords =  R_stop_words(Common_wrds,load_stopwords)
+
+    freqDictionary = {}
+
+    for i in RemoveStopWords :
+        freqDictionary[i] = []
+        freqDictionary[i].append(words_1.count(i))
+        freqDictionary[i].append(words_2.count(i))
+
+    print(freqDictionary)
+
 
 def load_stopwords(filename):
     '''
