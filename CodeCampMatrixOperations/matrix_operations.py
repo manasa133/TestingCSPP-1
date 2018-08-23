@@ -17,10 +17,9 @@ def mult_matrix(m1, m2):
         row =[]
         colNum = 0
         add = 0
-        for k in range(len(i)):
-            for q in m2:
-                add += q[colNum] * i[colNum]
-                colNum+=1
+        for q in m2:
+            add += q[colNum] * i[colNum]
+            colNum+=1
             row.append(add)
         result.append(row)
     return result
@@ -81,6 +80,7 @@ def main():
     # print(matrix_1)
     matrix_2 = read_matrix()
     # print(matrix_2)
+
     result = add_matrix(matrix_1,matrix_2)
     print(result)
 
