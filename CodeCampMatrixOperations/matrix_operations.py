@@ -65,7 +65,8 @@ def read_matrix():
     for i in range(rows):
         temp = [int(i) for i in raw_input().split(" ")]
         if(len(temp)!= columns):
-            return "Error: Invalid input for the matrix"
+            print("Error: Invalid input for the matrix")
+            return None
         matrix.append(temp)
     return matrix
 
@@ -82,15 +83,15 @@ def main():
     # multiply matrix 1 and matrix 2
    
     matrix_1 = read_matrix()
-    print(matrix_1)
+    # print(matrix_1)
     matrix_2 = read_matrix()
-    print(matrix_2)
+    # print(matrix_2)
 
-    result = add_matrix(matrix_1,matrix_2)
-    print(result)
-
-    result = mult_matrix(matrix_1,matrix_2)
-    print(result)
+    if(matrix_1!=None and matrix_2!=None):
+        result = add_matrix(matrix_1,matrix_2)
+        print(result)
+        result = mult_matrix(matrix_1,matrix_2)
+        print(result)
 
 
 
