@@ -8,7 +8,7 @@ def mult_matrix(m1, m2):
     '''
 
     if (len(m1)<len(m2[0])):
-        print("Error: Matrix shapes invalid for addition")
+        print("Error: Matrix shapes invalid for mult")
         return None
     # for i,j[] in zip(m1,m2):
     #     if(len(i)!= len(j)):
