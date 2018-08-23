@@ -50,10 +50,10 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    rows,columns= [int(i) for i in input().split(",")]
+    rows,columns= [int(i) for i in raw_input().split(",")]
     matrix = []
     for i in range(rows):
-        lst =[int(i) for i in input().split(" ")]
+        lst =[int(i) for i in raw_input().split(" ")]
         if len(lst)!=columns:
             print("Error: Invalid input for the matrix")
             return None
