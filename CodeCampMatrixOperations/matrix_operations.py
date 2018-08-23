@@ -34,13 +34,13 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if (len(m1)!=len(m2)):
+    if (len(m1)<=len(m2)):
         print("Error: Matrix shapes invalid for addition")
         return None
-    for i,j in zip(m1,m2):
-        if(len(i)!= len(j)):
-          print("Error: Matrix shapes invalid for addition")
-          return None
+    # for i,j in zip(m1,m2):
+    #     if(len(i)!= len(j)):
+    #       print("Error: Matrix shapes invalid for addition")
+    #       return None
     result =[]  
 
     for i,j in zip(m1,m2):
