@@ -8,10 +8,12 @@ def mult_matrix(m1, m2):
     '''
 
     if (len(m1)!=len(m2)):
-        return "Error: Matrix shapes invalid for addition"
+        print("Error: Matrix shapes invalid for addition")
+        return None
     for i,j in zip(m1,m2):
         if(len(i)!= len(j)):
-          return "Error: Matrix shapes invalid for addition"
+          print("Error: Matrix shapes invalid for addition")
+          return None
     result =[]  
     for i in m1 :
         row =[]
@@ -33,10 +35,12 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     if (len(m1)!=len(m2)):
-        return "Error: Matrix shapes invalid for addition"
+        print("Error: Matrix shapes invalid for addition")
+        return None
     for i,j in zip(m1,m2):
         if(len(i)!= len(j)):
-          return "Error: Matrix shapes invalid for addition"
+          print("Error: Matrix shapes invalid for addition")
+          return None
     result =[]  
 
     for i,j in zip(m1,m2):
