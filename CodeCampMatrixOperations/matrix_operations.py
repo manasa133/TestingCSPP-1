@@ -15,13 +15,12 @@ def mult_matrix(m1, m2):
     #       print("Error: Matrix shapes invalid for addition")
     #       return None
     result =[]  
-    for i in m1 :
+    for i in range(len(m1)):
         row =[]
-        colNum = 0
-        add = 0
-        for q in m2:
-            add += q[colNum] * i[colNum]
-            colNum+=1
+        for j in range(len(m2[0])):
+            add = 0
+            for k in range(len(m2)):
+                add+= m1[i][k]*m2[k][j]
             row.append(add)
         result.append(row)
     return result
