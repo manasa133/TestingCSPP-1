@@ -54,7 +54,6 @@ def checkWinner(matrix):
 		print(column(matrix)[1])
 	if (diagonals(matrix)[0]):
 		print(diagonals(matrix)[1])
-	print("draw")
 	return False
 
 def checkGame(matrix):
@@ -77,7 +76,8 @@ def main():
 		i=i+1
 	# print(matrix)
 	if checkInput(matrix):
-		checkWinner(matrix)
+		if(checkWinner(matrix)==False):
+			print("draw")
 	else :
 		print("invalid input")
 
