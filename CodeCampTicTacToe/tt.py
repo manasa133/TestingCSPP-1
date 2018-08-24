@@ -55,15 +55,14 @@ def checkWinner(matrix):
 	elif (column(matrix)[0]):
 		winner.append(column(matrix)[1])
 		# print(column(matrix)[1])
-	elif (diagonals(matrix)[0]):
+	if (diagonals(matrix)[0]):
 		# print(diagonals(matrix)[1])
 		winner.append(diagonals(matrix)[1])
 	else :
-		# print("draw")
-		winner.append("draw")
+		print("draw")
 	if(len(winner)==1):
 		print(winner[0])
-	else:
+	elif (len(winner)>1):
 		print("invalid game")
 
 def checkGame(matrix):
