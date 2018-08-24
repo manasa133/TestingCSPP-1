@@ -54,14 +54,18 @@ def checkWinner(matrix):
 		print(column(matrix)[1])
 	if (diagonals(matrix)[0]):
 		print(diagonals(matrix)[1])
+	print("draw")
 	return False
 
+def checkGame(matrix):
+	pass
 def checkInput(matrix):
 	for row in matrix:
 		for value in row:
 			if value not in ("o x ."):
 				return False
 	return True
+
 
 
 def main():
