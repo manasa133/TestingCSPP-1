@@ -48,14 +48,23 @@ def diagonals(mat):
 
 def checkWinner(matrix):
 	# print((row(matrix))[0])
+	winner =[]
 	if (row(matrix)[0]):
-		print(row(matrix)[1])
+		winner.append(row(matrix)[1])
+		# print(row(matrix)[1])
 	elif (column(matrix)[0]):
-		print(column(matrix)[1])
+		winner.append(column(matrix)[1])
+		# print(column(matrix)[1])
 	elif (diagonals(matrix)[0]):
-		print(diagonals(matrix)[1])
+		# print(diagonals(matrix)[1])
+		winner.append(diagonals(matrix)[1])
 	else :
-		print("draw")
+		# print("draw")
+		winner.append("draw")
+	if(len(winner)==1):
+		print(winner[0])
+	else:
+		print("invalid game")
 
 def checkGame(matrix):
 	count_o = sum([i.count("o")for i in matrix])
