@@ -12,12 +12,12 @@ def row(mat):
 			# return (True,"x")
 	if(count_x==1 and count_o==1):
 		print("invalid game")
-		return (False,100)
+		exit()
 	elif(count_o==1):
 		return(True,"o")
 	elif(count_x==1):
 		return(True,"x")
-	exit()
+
 
 def column(mat):
 	trans = []
