@@ -58,8 +58,13 @@ def checkWinner(matrix):
 		print("draw")
 
 def checkGame(matrix):
-	print(matrix.count("o"))
-	pass
+	count_o = sum([i.count("o")for i in matrix])
+	# print(count_o)
+	count_x = sum([i.count("x")for i in matrix])
+	# print(count_x)
+	if(count_x>count_o or count_o>count_x):
+		return False
+	return True
 def checkInput(matrix):
 	for row in matrix:
 		for value in row:
@@ -77,10 +82,13 @@ def main():
 		matrix.append(row)
 		i=i+1
 	# print(matrix)
-	checkGame(matrix)
-	# if checkInput(matrix):
-	# 	checkWinner(matrix)
-	# else :
-	# 	print("invalid input")
+	# checkGame(matrix)
+	if checkInput(matrix):
+		if checkGame(matrix):
+			checkWinner(matrix)
+		else:
+			print("invalid game")
+	else :
+		print("invalid input")
 
 main()
