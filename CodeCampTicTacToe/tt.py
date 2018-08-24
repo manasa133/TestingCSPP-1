@@ -62,7 +62,9 @@ def checkGame(matrix):
 	# print(count_o)
 	count_x = sum([i.count("x")for i in matrix])
 	# print(count_x)
-	if(count_x>count_o or count_o>count_x):
+	if(count_x>count_o):
+		return False
+	if (count_o>count_x):
 		return False
 	return True
 def checkInput(matrix):
