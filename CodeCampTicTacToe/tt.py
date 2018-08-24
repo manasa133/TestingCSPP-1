@@ -1,12 +1,22 @@
 
 
 def row(mat):
+	count_o=0
+	count_x =0
 	for i in mat:
-		if i.count("o")==3: 
-			return (True,"o")
-		if i.count("x")==3: 
-			return (True,"x")
-	return (False,1)
+		if i.count("o")==3:
+			count_o=1
+			# return (True,"o")
+		if i.count("x")==3:
+			count_x =1
+			# return (True,"x")
+	if(count_x==1 and count_o==1):
+		print("invalid game")
+		return (False,100)
+	elif(count_o==1):
+		return(True,"o")
+	elif(count_x==1):
+		return(True,"x")
 
 def column(mat):
 	trans = []
@@ -28,6 +38,8 @@ def diagonals(mat):
 		d1.append(mat[i][i])
 
 	# print(d1)
+	if(d1.count("o")==3 and  d1.count("x")==3 ):
+		return(False,None)
 	if d1.count("o")==3:
 		return (True,"o")
 	if  d1.count("x")==3:
@@ -51,19 +63,15 @@ def checkWinner(matrix):
 	winner =[]
 	if (row(matrix)[0]):
 		winner.append(row(matrix)[1])
-		# print(row(matrix)[1])
-	if (column(matrix)[0]):
+		print(row(matrix)[1])
+	elif (column(matrix)[0]):
 		winner.append(column(matrix)[1])
-		# print(column(matrix)[1])
-	if (diagonals(matrix)[0]):
-		# print(diagonals(matrix)[1])
+		print(column(matrix)[1])
+	elif (diagonals(matrix)[0]):
+		print(diagonals(matrix)[1])
 		winner.append(diagonals(matrix)[1])
 	else :
 		print("draw")
-	if(len(winner)==1):
-		print(winner[0])
-	elif (len(winner)>1):
-		print("invalid game")
 
 def checkGame(matrix):
 	count_o = sum([i.count("o")for i in matrix])
