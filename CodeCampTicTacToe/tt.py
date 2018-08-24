@@ -52,7 +52,7 @@ def checkWinner(matrix):
 	if (row(matrix)[0]):
 		winner.append(row(matrix)[1])
 		# print(row(matrix)[1])
-	elif (column(matrix)[0]):
+	if (column(matrix)[0]):
 		winner.append(column(matrix)[1])
 		# print(column(matrix)[1])
 	if (diagonals(matrix)[0]):
