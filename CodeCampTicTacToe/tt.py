@@ -17,6 +17,7 @@ def row(mat):
 		return(True,"o")
 	elif(count_x==1):
 		return(True,"x")
+	return(False,1)
 
 
 def column(mat):
