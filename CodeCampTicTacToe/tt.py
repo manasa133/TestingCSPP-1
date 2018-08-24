@@ -46,7 +46,7 @@ def diagonals(mat):
 		return (True,"x")
 	return (False,None)
 
-def check(matrix):
+def checkWinner(matrix):
 	# print((row(matrix))[0])
 	if (row(matrix)[0]):
 		print(row(matrix)[1])
@@ -55,6 +55,13 @@ def check(matrix):
 	if (diagonals(matrix)[0]):
 		print(diagonals(matrix)[1])
 	return False
+
+def checkInput(matrix):
+	for row in matrix:
+		for value in row:
+			if value not in ("o x ."):
+				return False
+	return True
 
 
 def main():
@@ -65,6 +72,9 @@ def main():
 		matrix.append(row)
 		i=i+1
 	# print(matrix)
-	check(matrix)
+	if checkInput(matrix):
+		checkWinner(matrix)
+	else :
+		print("invalid input")
 
 main()
