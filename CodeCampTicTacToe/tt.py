@@ -54,7 +54,7 @@ def main():
 	matrix = []
 	i=0
 	while i<3:
-		row = input().split(" ")
+		row = raw_input().split(" ")
 		matrix.append(row)
 		i=i+1
 	# print(matrix)
