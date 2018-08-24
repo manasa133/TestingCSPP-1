@@ -17,6 +17,7 @@ def row(mat):
 		return(True,"o")
 	elif(count_x==1):
 		return(True,"x")
+	exit()
 
 def column(mat):
 	trans = []
