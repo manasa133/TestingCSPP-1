@@ -26,13 +26,20 @@ def diagonals(mat):
 	d1 =[]
 	for i in range(len(mat)):
 		d1.append(mat[i][i])
+
+	# print(d1)
 	if d1.count("o")==3:
 		return (True,"o")
 	if  d1.count("x")==3:
 		return (True,"x")
 	d2 = []
-	for i in range(len(mat)-1,0,-1):
-		d2.append(mat[i][i])
+	j=0
+	for i in range(len(mat)-1,-1,-1):
+		# print(mat[j][i],i)
+		d2.append(mat[j][i])
+		j=j+1
+
+	# print(d2)
 	if d2.count("o")==3:
 		return (True,"o")
 	if  d2.count("x")==3:
